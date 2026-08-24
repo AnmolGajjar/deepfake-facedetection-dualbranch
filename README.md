@@ -9,6 +9,7 @@ The project runs a three-way ablation — spatial-only, frequency-only, and dual
 ---
 
 ## Results
+![ROC curves](assets/roc_curves.png)
 
 Evaluated on a held-out test set of 14,079 images (15% of the corpus).
 
@@ -27,7 +28,7 @@ Evaluated on a held-out test set of 14,079 images (15% of the corpus).
 | Dual-branch | 3,069 | 59 | 59 | 10,892 |
 
 ### Learned attention weights
-
+![Attention weights](assets/attention_weights.png)
 The fusion module produces weights α (spatial) and β (frequency) constrained to sum to 1:
 
 | Model | α (spatial) | β (frequency) |
