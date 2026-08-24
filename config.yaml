@@ -1,0 +1,45 @@
+data:
+  dataset: both
+  dfdc_root: data/dfdc/train
+  ff_root: data/faceforensics
+  num_workers: 0
+  split_ratios:
+  - 0.7
+  - 0.15
+  - 0.15
+eval:
+  metrics:
+  - auc
+  - accuracy
+  - f1
+  threshold: 0.5
+logging:
+  checkpoint_dir: checkpoints
+  project_name: deepfake-detection
+  results_dir: results
+  save_best_only: true
+  use_wandb: false
+model:
+  dropout: 0.3
+  freq_channels:
+  - 32
+  - 64
+  - 128
+  fusion: attention_gate
+  spatial_backbone: efficientnet_b0
+  spatial_pretrained: true
+preprocess:
+  face_margin: 0.3
+  face_size: 224
+  fft_size: 224
+  use_mtcnn: false
+train:
+  amp: true
+  batch_size: 32
+  early_stopping: 7
+  epochs: 30
+  lr: 0.0001
+  lr_scheduler: cosine
+  seed: 42
+  warmup_epochs: 2
+  weight_decay: 0.0001

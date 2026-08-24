@@ -1,0 +1,37 @@
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Datasets — never commit these
+data/
+*.mp4
+*.avi
+*.mov
+*.npy
+*.npz
+
+# Model weights — too large for GitHub
+checkpoints/
+*.pth
+*.pt
+*.ckpt
+*.h5
+
+# Generated outputs
+results/
+*.log
+
+# Secrets & local config
+.env
+*.key
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
