@@ -7,16 +7,19 @@ env/
 __pycache__/
 *.pyc
 *.pyo
+*.pyd
 
-# Datasets — never commit these
+# Datasets
 data/
 *.mp4
 *.avi
 *.mov
+*.jpg
+*.png
 *.npy
 *.npz
 
-# Model weights — too large for GitHub
+# Model weights
 checkpoints/
 *.pth
 *.pt
@@ -27,11 +30,17 @@ checkpoints/
 results/
 *.log
 
-# Secrets & local config
+# Third-party licensed script
+faceforensics_download_v4.py
+
+FINAL_PROJECT_REPORT.pdf
+
+# Secrets
 .env
 *.key
 
 # OS / editor
 .DS_Store
+Thumbs.db
 .idea/
 .vscode/
